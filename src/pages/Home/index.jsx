@@ -12,7 +12,7 @@ const Home = ({ link = '', data = '', error = '', loading = false, handleChange 
     <>
       <Header />
       {loading === true ? (
-        <Loading message="Buscando conversiones" />
+        <Loading message="Buscando formatos" />
       ) : data !== '' ? (
         <Result data={data} link={link} />
       ) : (
