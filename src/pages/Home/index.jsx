@@ -1,13 +1,23 @@
 // Components
 import Header from '../../components/Header'
-import Search from '../../components/Search'
 import Footer from '../../components/Footer'
+import Result from '../../components/Result'
+import Search from '../../components/Search'
+import Loading from '../../components/Loading'
 
-const Home = ({ link, handleChange }) => {
+const NO_OP = () => {}
+
+const Home = ({ link = '', data = '', error = '', loading = false, handleChange = NO_OP, handleSubmit = NO_OP }) => {
   return (
     <>
       <Header />
-      <Search link={link} handleChange={handleChange} />
+      {loading === true ? (
+        <Loading message="Buscando conversiones" />
+      ) : data !== '' ? (
+        <Result data={data} link={link} />
+      ) : (
+        <Search link={link} error={error} loading={loading} handleChange={handleChange} handleSubmit={handleSubmit} />
+      )}
       <Footer />
     </>
   )

@@ -1,0 +1,16 @@
+.Badge {
+  margin: 0;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 50px;
+}
+
+.primary {
+  background-color: #e8eaff;
+}
+
+.secondary {
+  background-color: #d1e5fd;
+}

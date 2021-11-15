@@ -9,7 +9,7 @@ const search = ({ link }) => {
 
 const convert = ({ itag, link }) => {
   const request = axios.post(`${baseUrl}/convert`, { itag, link })
-  return request.then((response) => response.data)
+  return request.then((response) => response)
 }
 
 export default { search, convert }

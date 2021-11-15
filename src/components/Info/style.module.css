@@ -1,0 +1,39 @@
+.Info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Info picture,
+.Info h4,
+.Info p {
+  margin-bottom: 1rem;
+}
+.Info h4,
+.Info p {
+  white-space: wrap;
+}
+.Info picture {
+  width: 100%;
+  text-align: center;
+}
+.Info picture img {
+  width: 500px;
+}
+
+.Info h4 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.Info p {
+  font-size: 0.8rem;
+  line-height: 1.25rem;
+}
+
+@media screen and (max-width: 768px) {
+  .Info picture img {
+    width: 300px;
+  }
+}

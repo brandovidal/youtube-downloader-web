@@ -1,0 +1,13 @@
+.ListOfConvert {
+  margin: 1rem 0;
+}
+.ListOfConvert .title {
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid #414141;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.ListOfConvert [class*="Convert"] {
+  margin-bottom: 1rem;
+}

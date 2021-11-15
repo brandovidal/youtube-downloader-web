@@ -1,0 +1,52 @@
+/* Buton primary */
+.Convert {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(50px, 1fr));
+  grid-gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+.Convert button {
+  max-width: 110px;
+  transition: ease-in 300ms all;
+}
+.Convert button.primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  color: #fff;
+  border-radius: 8px;
+  background-color: #8166cc;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+.Convert button.primary:hover {
+  background-color: #37246b;
+}
+.Convert button img {
+  padding-right: 0.25rem;
+  width: 18px;
+}
+
+.Convert button.secondary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  color: #fff;
+  border-radius: 8px;
+  background-color: #54436b;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+@media screen and (max-width: 768px) {
+  .Convert {
+    justify-content: center;
+    grid-gap: 0;
+  }
+}
