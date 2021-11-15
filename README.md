@@ -11,7 +11,7 @@
 Start App
 
 ```
-yarn start
+yarn dev
 ```
 
 Build App
