@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 
-import { useLocation } from 'wouter'
-
 // Services
 import youtubeService from '../../services/youtube'
 
@@ -12,7 +10,8 @@ import style from './style.module.css'
 
 function Search({ link, handleChange }) {
   const [error, setError] = useState('')
-  const [location, setLocation] = useLocation()
+
+  const [loading, setLoading] = useState(false)
 
   const validateLink = (link) => {
     setError('')
@@ -37,20 +36,15 @@ function Search({ link, handleChange }) {
     }
     console.log({ link })
     setError('')
+    setLoading(true)
 
     youtubeService
       .search({ link })
-      .then((res) => {
-        console.log({ res })
+      .then((response) => {
+        console.log({ response })
+        setLoading(false)
       })
       .catch((err) => console.error(err))
-
-    // setLocation(`/convert?link=${link}`)
-  }
-
-  const handleClickButton = () => {
-    console.log({ link })
-    // window.open(link, '_blank')
   }
 
   return (
@@ -70,7 +64,7 @@ function Search({ link, handleChange }) {
           {error && <p className={style.error}>{error}</p>}
         </div>
         <div className={style.formGroup}>
-          <Button handleClickButton={handleClickButton}  icon={'play'} defaultText='Convertir' />
+          <Button type="submit" icon={'play'} defaultText="Convertir" loading={loading} />
         </div>
       </form>
     </section>

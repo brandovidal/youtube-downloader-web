@@ -7,4 +7,9 @@ const search = ({ link }) => {
   return request.then((response) => response.data)
 }
 
-export default { search }
+const convert = ({ itag, link }) => {
+  const request = axios.post(`${baseUrl}/convert`, { itag, link })
+  return request.then((response) => response.data)
+}
+
+export default { search, convert }
