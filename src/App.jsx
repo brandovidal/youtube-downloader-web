@@ -1,14 +1,15 @@
-import logo from "./assets/img/logo.png";
-import "./App.css";
+import './App.css'
+import { Route } from 'wouter'
+
+// Pages
+import Home from './pages/Home'
 
 function App() {
-
   return (
     <div className="App">
-      <h1>Youtube Downloader</h1>
-      <img src={logo} className="logo" alt="logo" />
+      <Route path="/" component={Home} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
