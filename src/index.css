@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'PT Sans';
-  src: url(./assets/fonts/PTSans-Regular.ttf), url(./assets/fonts/PTSans-Bold.ttf);
+  src: url(fonts/PTSans-Regular.ttf), url(fonts/PTSans-Bold.ttf);
 }
 
 body {

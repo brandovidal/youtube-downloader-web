@@ -1,0 +1,74 @@
+.Search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  padding: 0 4rem;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #e8eaff;
+}
+.Search form {
+  margin: 2rem 0;
+  display: flex;
+}
+.Search .formGroup .formControl,
+.Search .formGroup button {
+  border: none;
+  height: 50px;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(35, 38, 59, 0.25);
+}
+.Search form .formGroup input {
+  min-width: 500px;
+  margin: 0 0.5rem 1rem 0;
+  border: 1px solid #eee;
+  outline: none;
+}
+.Search form .formGroup button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8166cc;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+.Search form .formGroup button:hover {
+  background-color: #37246b;
+}
+.Search form .formGroup button img {
+  padding-right: 0.5rem;
+}
+
+.Search .error {
+  margin: 0;
+  padding: 0 1rem;
+  color: #ff6d6d;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: all 400ms ease-in;
+}
+
+@media screen and (max-width: 768px) {
+  .Search {
+    padding: 0 1rem;
+  }
+  .Search form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .Search form .formGroup input,
+  .Search form .formGroup button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .Search form .formGroup input {
+    min-width: initial;
+  }
+}

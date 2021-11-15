@@ -1,0 +1,47 @@
+.Header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: 10vh;
+  width: 100%;
+  padding: 1rem 4rem;
+  text-align: center;
+  transition: all 300ms ease-out;
+}
+.Header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.Header ul li {
+  line-height: 2rem;
+  /* padding: 0.5rem 0; */
+}
+.Header ul .logo {
+  font-size: 1.25rem;
+}
+.Header ul .navItem {
+  font-size: 1rem;
+  text-align: right;
+}
+.Header ul .navItem span {
+  margin: 0;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #8166cc;
+}
+
+@media screen and (max-width: 768px) {
+  .Header {
+    padding: 1rem 1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .Header ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
