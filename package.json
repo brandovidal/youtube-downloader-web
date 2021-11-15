@@ -8,8 +8,12 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "axios": "0.24.0",
+    "classnames": "2.3.1",
+    "minireset.css": "0.0.7",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "wouter": "2.8.0-alpha.2"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "1.0.9",
