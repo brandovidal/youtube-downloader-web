@@ -3,11 +3,11 @@ import Header from '../../components/Header'
 import Search from '../../components/Search'
 import Footer from '../../components/Footer'
 
-const Home = () => {
+const Home = ({ link, handleChange }) => {
   return (
     <>
       <Header />
-      <Search />
+      <Search link={link} handleChange={handleChange} />
       <Footer />
     </>
   )

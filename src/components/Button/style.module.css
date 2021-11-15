@@ -1,0 +1,34 @@
+.Button {
+  transition: ease-in 300ms all;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+.Button img {
+  padding-right: 0.25rem;
+  width: 18px;
+}
+.primary {
+  background-color: #8166cc;
+  color: #fff;
+}
+.primary:hover {
+  background-color: #37246b;
+}
+
+.Button.secondary {
+  background-color: #171719;
+  color: #fff;
+}
+
+.dark {
+  background-color: #46464c;
+  color: #fff;
+}
+.dark:hover {
+  background-color: #171719;
+}
