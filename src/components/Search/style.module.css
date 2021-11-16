@@ -35,10 +35,6 @@
   cursor: pointer;
   transition: all 0.15s ease-in;
 }
-.Search form .formGroup button img {
-  padding-right: 0.5rem;
-}
-
 .Search .error {
   margin: 0;
   padding: 0 1rem;

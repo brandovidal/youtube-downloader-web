@@ -9,12 +9,14 @@ const Button = ({
   icon,
   loading = false,
   active = false,
-  activeState = false,
-  activeText = 'Descargado',
+  activeText = '',
+  className = 'primary',
   defaultText,
 }) => {
-  const textButton = active && activeState ? activeText : defaultText
-  const classNameButton = active && activeState ? style.secondary : style.primary
+  console.log({ className })
+  const textButton = active ? activeText : defaultText
+  const classNameButton = className !== null ? style[className] : style.primary
+  const classNameLoading = loading !== false ? style['loading'] : style['loading']
 
   return (
     <button
@@ -23,7 +25,14 @@ const Button = ({
       onClick={handleClick}
       disabled={loading ? 'disabled' : ''}
     >
-      {active && activeState ? '' : <img src={`/svg/${icon}.svg`} alt={textButton} />}
+      {/* {<div className={style.loading}></div>} */}
+      {loading ? (
+        <div className={style.loading}></div>
+      ) : active ? (
+        ''
+      ) : (
+        <img src={`/svg/${icon}.svg`} alt={textButton} />
+      )}
       <span>{textButton}</span>
     </button>
   )

@@ -55,7 +55,7 @@ const Convert = ({ itag, format = 'MP3', filesize = '', res, link }) => {
     }, 1500)
   }
 
-  const textButton = loading ? 'Generando...' : converted ? 'Generado' : 'Generar'
+  const textButton = loading ? 'Generando' : converted ? 'Generado' : 'Generar'
   const classNameButton = converted ? 'secondary' : 'primary'
   const typeButton = format === 'MP3' ? 'secondary' : 'primary'
 
@@ -75,7 +75,7 @@ const Convert = ({ itag, format = 'MP3', filesize = '', res, link }) => {
           <Button
             type="button"
             icon="download"
-            activeState="true"
+            className={classNameButton}
             active={downloaded}
             activeText="Descargado"
             defaultText="Descargar"

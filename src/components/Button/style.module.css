@@ -9,8 +9,11 @@
   transition: all 0.15s ease-in;
 }
 .Button img {
-  padding-right: 0.25rem;
+  margin-right: 0.25rem;
   width: 18px;
+}
+.Button span {
+  margin-left: 0.25rem;
 }
 .primary {
   background-color: #8166cc;
@@ -20,7 +23,7 @@
   background-color: #37246b;
 }
 
-.Button.secondary {
+.secondary {
   background-color: #171719;
   color: #fff;
 }
@@ -31,4 +34,34 @@
 }
 .dark:hover {
   background-color: #171719;
+}
+
+.loading {
+  width: 12px;
+  height: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.8); 
+  border-left-color: transparent;
+  border-radius: 50%;
+  animation: rotate 1s linear infinite;
+  -webkit-animation: rotate 1s linear infinite;
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+}
+
+
+@keyframes rotate {
+  to {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
