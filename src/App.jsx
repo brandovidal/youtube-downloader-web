@@ -9,6 +9,7 @@ import youtubeService from './services/youtube'
 import Home from './pages/Home'
 
 import './App.css'
+import Convert from './pages/Convert'
 
 function App() {
   const [link, setLink] = useState('')
@@ -68,6 +69,9 @@ function App() {
           handleChange={handleSearchChange}
           handleSubmit={handleSearchSubmit}
         />
+      </Route>
+      <Route path='/convert'>
+        <Convert />
       </Route>
     </div>
   )
