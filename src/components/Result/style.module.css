@@ -1,9 +1,7 @@
 .Result {
-  display: grid;
-  gap: 1rem;
-  /* grid-auto-rows: 25rem; */
-  grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr));
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   width: 100%;
   padding: 3rem 4rem;
   background-color: #f6f7ff;
@@ -22,6 +20,7 @@
 }
 @media screen and (max-width: 768px) {
   .Result {
+    flex-direction: column;
     padding: 1rem 1rem;
   }
   .Result article {

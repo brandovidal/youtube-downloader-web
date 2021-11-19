@@ -3,7 +3,7 @@ import Button from '../Button'
 
 import style from './style.module.css'
 
-function Search({ link, error, loading, handleChange, handleSubmit }) {
+function Search({ link, error, handleChange, handleSubmit }) {
   return (
     <section className={style.Search}>
       <h3>Convertidor y descargador de YouTube a MP3/MP4.</h3>
@@ -21,7 +21,7 @@ function Search({ link, error, loading, handleChange, handleSubmit }) {
           {error && <p className={style.error}>{error}</p>}
         </div>
         <div className={style.formGroup}>
-          <Button type="submit" icon='play' defaultText="Convertir" loading={loading} />
+          <Button type="submit" icon='play' defaultText="Convertir" />
         </div>
       </form>
     </section>

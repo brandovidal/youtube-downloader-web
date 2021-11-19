@@ -1,23 +1,37 @@
+import { useState } from 'react'
+import { useLocation } from 'wouter'
+
+// Utils
+import { validateLink } from '../../utils'
+
 // Components
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import Result from '../../components/Result'
 import Search from '../../components/Search'
-import Loading from '../../components/Loading'
 
-const NO_OP = () => {}
+const Home = () => {
+  const [link, setLink] = useState('')
+  const [error, setError] = useState('')
 
-const Home = ({ link = '', data = '', error = '', loading = false, handleChange = NO_OP, handleSubmit = NO_OP }) => {
+  const [location, setLocation] = useLocation()
+
+  // Events
+  const handleChange = (evt) => setLink(evt.target.value)
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault()
+
+    const validate = validateLink({ link, setError })
+    if (!validate) {
+      return
+    }
+    setLocation(`/convert?link=${link}`)
+  }
+
   return (
     <>
       <Header />
-      {loading === true ? (
-        <Loading message="Buscando formatos" />
-      ) : data !== '' ? (
-        <Result data={data} link={link} />
-      ) : (
-        <Search link={link} error={error} loading={loading} handleChange={handleChange} handleSubmit={handleSubmit} />
-      )}
+      <Search link={link} error={error} handleChange={handleChange} handleSubmit={handleSubmit} />
       <Footer />
     </>
   )

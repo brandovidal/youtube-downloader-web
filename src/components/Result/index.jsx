@@ -8,6 +8,9 @@ function Result({ data, link }) {
   return (
     data && (
       <section className={style.Result}>
+        <article>
+          volver 
+          </article>
         <article className={style.streams}>
           <h3>Formatos de descarga:</h3>
           <small>Pulse el boton Generar para obtener el formato de descarga seleccionado.</small>

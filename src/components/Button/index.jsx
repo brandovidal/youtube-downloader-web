@@ -6,17 +6,15 @@ const NO_OP = () => {}
 const Button = ({
   type = 'button',
   handleClick = NO_OP,
-  icon,
+  icon = '',
   loading = false,
   active = false,
   activeText = '',
   className = 'primary',
   defaultText,
 }) => {
-  console.log({ className })
   const textButton = active ? activeText : defaultText
   const classNameButton = className !== null ? style[className] : style.primary
-  const classNameLoading = loading !== false ? style['loading'] : style['loading']
 
   return (
     <button
@@ -25,10 +23,9 @@ const Button = ({
       onClick={handleClick}
       disabled={loading ? 'disabled' : ''}
     >
-      {/* {<div className={style.loading}></div>} */}
       {loading ? (
         <div className={style.loading}></div>
-      ) : active ? (
+      ) : active || !icon ? (
         ''
       ) : (
         <img src={`/svg/${icon}.svg`} alt={textButton} />
