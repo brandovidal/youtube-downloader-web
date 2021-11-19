@@ -2,12 +2,19 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #414141;
-  color: #fff;
+  height: 10vh;
+  background: #fff;
+  color: #414141;
   padding: 2rem 4rem;
   display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+}
+
+@media screen and (max-width: 768px) {
+  .Footer {
+    padding: 1rem 1.5rem;
+  }
 }
