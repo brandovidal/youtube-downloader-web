@@ -7,7 +7,7 @@ import style from './style.module.css'
 
 function NotFound({
   textError = 'La página que estas buscando fue removida o no esta temporalmente disponible',
-  textButton = 'Ir al inicio',
+  textButton = 'Volver al inicio',
   route = '/',
 }) {
   const [location, setLocation] = useLocation()
@@ -23,7 +23,7 @@ function NotFound({
       </picture>
       <h1 className={style.title}>404</h1>
       <p className={style.subtitle}>{textError}</p>
-      <Button icon="" defaultText={textButton} className="dark" handleClick={handleClick} />
+      <Button defaultText={textButton} className="dark" handleClick={handleClick} />
     </section>
   )
 }
