@@ -13,15 +13,9 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/">
-          <Home />
-        </Route>
-        <Route path="/convert">
-          <Convert />
-        </Route>
-        <Route>
-          <NotFound />
-        </Route>
+        <Route path="/" component={Home} />
+        <Route path="/convert" component={Convert} />
+        <Route component={NotFound} />
       </Switch>
     </div>
   )
