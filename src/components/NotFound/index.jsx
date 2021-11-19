@@ -19,7 +19,7 @@ function NotFound({
   return (
     <section className={styles.NotFound}>
       <picture className={styles.icon}>
-        <img src="svg/alien.svg" alt="Image Alien Error 404" />
+        <img src="/svg/alien.svg" alt="Image Alien Error 404" />
       </picture>
       <h1 className={styles.title}>404</h1>
       <p className={styles.subtitle}>{textError}</p>
