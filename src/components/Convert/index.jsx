@@ -61,16 +61,16 @@ const Convert = ({ itag, format = 'MP3', filesize = '', res, link }) => {
 
   return (
     <div className={style.Convert}>
-      <div className="item">
+      <div className={style.item}>
         <Badge text={format} type={typeButton}></Badge>
       </div>
-      <div className="item">
+      <div className={style.item}>
         <p className="res">{res}</p>
       </div>
-      <div className="item">
+      <div className={style.item}>
         <p className="filesize">{filesize}</p>
       </div>
-      <div className="item">
+      <div className={style.item}>
         {converted ? (
           <Button
             type="button"
