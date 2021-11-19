@@ -33,7 +33,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.15s ease-in;
+  transition: margin 0.15s ease-in;
 }
 .Search .error {
   margin: 0;
@@ -41,7 +41,7 @@
   color: #ff6d6d;
   font-size: 0.9rem;
   font-weight: bold;
-  transition: all 400ms ease-in;
+  transition: margin 400ms ease-in;
 }
 
 @media screen and (max-width: 768px) {
@@ -53,12 +53,16 @@
     flex-direction: column;
     width: 100%;
   }
+  .Search form .formGroup input {
+    min-width: initial;
+  }
   .Search form .formGroup input,
   .Search form .formGroup button {
     width: 100%;
-    margin-bottom: 0.5rem;
   }
-  .Search form .formGroup input {
-    min-width: initial;
+  .Search form .formGroup input,
+  .Search form .formGroup button,
+  .Search .error {
+    margin: 0 0 0.5rem 0;
   }
 }
