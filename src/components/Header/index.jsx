@@ -7,7 +7,9 @@ function Header() {
     <header className={style.Header}>
       <ul>
         <li className={style.logo}>
-          <Link href="/">Dracon Tube</Link>
+          <Link href="/">
+            dracontube
+          </Link>
         </li>
         <li className={style.navItem}>
           <span>Youtube to mp3/mp4</span>

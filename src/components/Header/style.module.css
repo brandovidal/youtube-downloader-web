@@ -22,7 +22,18 @@
 }
 .Header ul .logo {
   font-size: 1.25rem;
+  font-weight: bold;
 }
+
+.Header ul .logo picture {
+  width: 50px;
+  /* transition: 1500ms; */
+  pointer-events: none;
+}
+.logo img {
+  width: 100%;
+}
+
 .Header ul .navItem {
   font-size: 1rem;
   text-align: right;
