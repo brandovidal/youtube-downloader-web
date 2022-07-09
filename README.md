@@ -6,13 +6,11 @@ Using React, Vite, Axios, CSS Module, minireset.css and own API to search and co
 
 ![Screenshot desktop](desktop.png)
 
-### URLS
+### Deploy
 
 [Repository API URL](https://github.com/brandovidal/youtube-downloader-api)
 
 [Web URL](https://tube.dracon.dev/)
-
-<!-- PorkBun :   ALIAS and CNAME for Answer is: pixie.porkbun.com -->
 
 ### Scripts
 
